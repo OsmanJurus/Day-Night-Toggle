@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+$scale: 100px;
+$time: 1s;
+// use template!
+@mixin common($a, $b, $c, $d, $e, $f) {
+  display: flex;
+  flex-direction: $a;
+  align-items: $b;
+  justify-content: $c;
+  width: $d;
+  height: $e;
+  background-color: $f;
+
+  transition: all ease-in 1s;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+
+  body {
+    // using above temple!
+    @include common(column, center, center, 100%, null, #333);
+    font-family: poppins;
+    font-size: 14px;
+    min-height: 100vh;
+    color: wheat
+  }
+}
+
+.container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  @media (min-width: 500px) {
+    width: 50%;
+  }
+  .title {
+    text-align: center;
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  .btn {
+    display: flex;
+    justify-content: end;
+    @media (max-width: 500px) {
+      justify-content: center;
+    }
+  }
+}
+
+.bg-color {
+  background-color: black;
+  color: white;
+}
+input[type="checkbox"] {
+  display: none;
+}
+
+.box {
+  @include common(column, null, center, $scale, $scale/2, black);
+  position: relative;
+  border-radius: $scale/4;
+  cursor: pointer;
+
+  .ball {
+    @include common(null, null, null, $scale/2, $scale/2, gray);
+    display: flex;
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid darkblue;
+    SVG {
+      width: $scale/3;
+      height: $scale/3;
+      color: white;
+      align-self: center;
+      justify-self: center;
+      margin-left: 5px;
+    }
+  }
+  .scenary {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    svg {
+      width: $scale/2;
+      height: $scale/3;
+      color: wheat;
+    }
+  }
+}

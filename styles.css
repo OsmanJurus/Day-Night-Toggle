@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+* body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #333;
+  transition: all ease-in 1s;
+  font-family: poppins;
+  font-size: 14px;
+  min-height: 100vh;
+  color: wheat;
+}
+
+.container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+@media (min-width: 500px) {
+  .container {
+    width: 50%;
+  }
+}
+.container .title {
+  text-align: center;
+}
+.container .content {
+  text-align: center;
+}
+.container .btn {
+  display: flex;
+  justify-content: end;
+}
+@media (max-width: 500px) {
+  .container .btn {
+    justify-content: center;
+  }
+}
+
+.bg-color {
+  background-color: black;
+  color: white;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100px;
+  height: 50px;
+  background-color: black;
+  transition: all ease-in 1s;
+  position: relative;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.box .ball {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background-color: gray;
+  transition: all ease-in 1s;
+  display: flex;
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid darkblue;
+}
+.box .ball SVG {
+  width: 33.3333333333px;
+  height: 33.3333333333px;
+  color: white;
+  align-self: center;
+  justify-self: center;
+  margin-left: 5px;
+}
+.box .scenary {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.box .scenary svg {
+  width: 50px;
+  height: 33.3333333333px;
+  color: wheat;
+}/*# sourceMappingURL=styles.css.map */
